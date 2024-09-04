@@ -1,0 +1,97 @@
+.contentDishbordAllUser {
+    overflow: hidden;
+}
+
+::ng-deep .p-datatable>.p-datatable-wrapper {
+    overflow: auto;
+    margin-left: 16%;
+    font-size: 20px;
+}
+
+
+::ng-deep .p-datatable.p-datatable-gridlines .p-datatable-thead > tr > th {
+    background-color: #EC407A !important;
+    color: white;
+    border-width: 1px 0 1px 1px;
+}
+::ng-deep tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    border: 1px solid #d8d2d2;
+}
+
+
+
+
+.delete_use{
+    color:red;text-align: center;margin: auto;display: block;font-size: 25px;
+    cursor: pointer;
+}
+.btn_dillog{
+    background-color: #155ab5;
+    margin: auto;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    width: 30%;
+}
+.Update_use{
+    color:green;text-align: center;margin: auto;display: block;font-size: 25px;
+    cursor: pointer;
+}
+.user_icon{
+    color:#155ab5;text-align: center;margin: auto;display: block;font-size: 25px;
+    cursor: pointer;
+}
+
+
+
+.user_icon_dilog{
+    color:#155ab5;
+    font-size: 50px;
+    margin: auto;display: block;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+.Update_user{
+    width: 100%;
+    background-color: #EC407A;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+
+.Update_user:hover{
+    opacity: 0.7;
+}
+@media (min-width:320px) and (max-width:767px){
+   .sidebar{
+       display: none;
+   } 
+}
+
+@media (min-width:767px) and (max-width:1200px){
+    .sidebar{
+        display: none;
+    } 
+ }
+
+ @media (min-width:1200px) and (max-width:1400px){
+    .sidebar{
+        display: none;
+    } 
+    
+ }
+

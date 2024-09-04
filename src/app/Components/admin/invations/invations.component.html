@@ -1,0 +1,46 @@
+<div class="contentDishbordAllUser">
+    <div class="sidebar">
+        <app-side-bar></app-side-bar>
+    </div>
+    <app-charts-dashboard></app-charts-dashboard>
+
+
+
+    <div class="card invention_tabel" style="background-color: #eee">
+        <p-table [value]="AllInvention" styleClass="p-datatable-gridlines" [tableStyle]="{ 'width': '20rem' }">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>_id</th>
+                    <th>updatedAt</th>
+                    <th>status</th>
+                    <th>link</th>
+                    <th>deleted</th>
+                    <th>createdAt</th>
+                    <th>NumInvitations</th>
+                    <th>NumAccepted</th>
+                    <th>DeleteAction</th>
+
+
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-AllInvention>
+                <tr>
+                    <td>{{AllInvention._id}}</td>
+                    <td>{{AllInvention.updatedAt}}</td>
+                    <td>{{AllInvention.status}}</td>
+                    <td>{{AllInvention.link}}</td>
+                    <td>{{AllInvention.deleted}}</td>
+                    <td>{{AllInvention.createdAt}}</td>
+                    <td>{{AllInvention.NumInvitations}}</td>
+                    <td>{{AllInvention.NumAccepted}}</td>
+                    <td (click)="DeleteInvationsAdmin(AllInvention._id)" class="createCourse"><i
+                            class="fa-solid fa-trash delete_use"></i></td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>
+
+<div class="card">
+    <p-toast></p-toast>
+</div>

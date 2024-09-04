@@ -1,0 +1,194 @@
+<div class="contentDishbordAllUser">
+
+
+
+    <div class="sidebar">
+        <app-side-bar></app-side-bar>
+    </div>
+    <app-charts-dashboard></app-charts-dashboard>
+
+
+    <div style="background-color: #eee">
+        <i (click)="PopUpCreate()" style="margin-left: 20rem" class="fa-solid fa-plus plus_icon fs-1 mb-3"></i>
+    </div>
+
+
+
+    <div class="card" style="background-color: #eee">
+        <p-table [value]="courses" styleClass="p-datatable-gridlines" [tableStyle]="{ 'width': '20rem' }">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>title</th>
+                    <th>status</th>
+                    <th>startAt</th>
+                    <th>price</th>
+                    <th>level</th>
+                    <th>image</th>
+                    <th>endAt</th>
+                    <th>discount</th>
+                    <th>category</th>
+                    <th>copone</th>
+                    <th>wallet</th>
+                    <th>userName</th>
+                    <th>role</th>
+                    <th>phone</th>
+                    <th>title</th>
+                    <th>Delete</th>
+                    <th>UpdateAction</th>
+                    <th>ActionUser</th>
+
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-courses>
+                <tr>
+                    <td>{{courses.title}}</td>
+                    <td>{{courses.status}}</td>
+                    <td>{{courses.startAt}}</td>
+                    <td>{{courses.price}}</td>
+                    <td>{{courses.level}}</td>
+                    <td><img [src]="courses.image" /></td>
+                    <td>{{courses.endAt}}</td>
+                    <td>{{courses.discount}}</td>
+                    <td>{{courses.category}}</td>
+                    <td>{{courses.copone}}</td>
+                    <td>{{courses.users.wallet}}</td>
+                    <td>{{courses.users.userName}}</td>
+                    <td>{{courses.users.role}}</td>
+                    <td>{{courses.users.phone}}</td>
+                    <td>{{courses.users.email}}</td>
+                    <td (click)="DeleteCoursesAdmin(courses._id)" class="createCourse"><i class="fa-solid fa-trash delete_use"></i></td>
+                    <td (click)="UpdateUser(courses)"><i class="fa-solid fa-pen Update_use"></i></td>
+                    <td (click)="showDialog(courses)"><i class="fa-solid fa-user user_icon"></i></td>
+
+                </tr>
+            </ng-template>
+        </p-table>
+
+        <div class="card flex justify-content-center">
+            <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="120"
+                [rowsPerPageOptions]="[10, 20, 30]"></p-paginator>
+        </div>
+
+
+
+    </div>
+
+
+    <p-dialog [modal]="true" [(visible)]="visible" [style]="{ width: '40rem' }">
+        <h3
+            style="color:white;background-color: #EC407A;font-weight: bolder;border-radius: 10px;width: fit-content;padding: 10px;text-align: center;margin: auto;">
+            Create User</h3>
+        <form [formGroup]="formCreate" (submit)="CreateCourses()">
+
+            <div class="d-flex justify-content-around mt-4">
+                <span class="p-float-label">
+                    <input pInputText id="username" formControlName="title" />
+                    <label style="font-weight: bolder;font-size:20px" htmlFor="username">title</label>
+                </span>
+
+                <span class="p-float-label">
+                    <input pInputText id="username" formControlName="description" />
+                    <label style="font-weight: bold;font-size:20px" htmlFor="username">description</label>
+                </span>
+            </div>
+
+            <div class="d-flex justify-content-around mt-4">
+                <label for="images" class="upload_img">قم بادخال صوره<i class="fa-solid fa-cloud-arrow-up"></i></label>
+                <input id="images" type="file" formControlName="image" />
+
+                <span class="p-float-label">
+                    <input pInputText id="username" formControlName="level" />
+                    <label style="font-weight: bold;font-size:20px" htmlFor="username">level</label>
+                </span>
+
+            </div>
+
+            <div class="d-flex justify-content-around mt-4">
+
+                <span class="p-float-label">
+                    <p-inputNumber inputId="integeronly" formControlName="price"> </p-inputNumber>
+                    <label style="font-weight: bold;font-size:20px" htmlFor="number-input">price</label>
+                </span>
+
+
+                <span class="p-float-label">
+                    <p-inputNumber inputId="integeronly" formControlName="discount"> </p-inputNumber>
+                    <label style="font-weight: bold;font-size:20px" htmlFor="number-input">discount</label>
+                </span>
+            </div>
+
+            <div class="d-flex justify-content-around mt-4">
+                <span class="p-float-label">
+                    <input pInputText id="username" formControlName="category" />
+                    <label style="font-weight: bold;font-size:20px" htmlFor="username">category</label>
+                </span>
+
+
+                <span class="p-float-label">
+                    <p-inputNumber inputId="integeronly" formControlName="views"> </p-inputNumber>
+                    <label style="font-weight: bold;font-size:20px" htmlFor="number-input">views</label>
+                </span>
+            </div>
+
+            <div class="d-flex flex-wrap justify-content-around mt-4">
+                <div class="mb-3">
+                    <label class="uplod_video" for="videoUrl">قم بادخال فيديو<i
+                            class="fa-solid fa-cloud-arrow-up"></i></label>
+                    <input id="videoUrl" type="file" formControlName="video" />
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-around mt-4 mb-3">
+                <p-calendar formControlName="startAt" [showIcon]="true"></p-calendar>
+
+
+                <p-calendar formControlName="endAt" [showIcon]="true"></p-calendar>
+
+            </div>
+
+            <button [ngClass]="{'invalid':!formCreate.valid}" [disabled]="!formCreate.valid" class="createCourses"
+                type="submit">Create Courses</button>
+        </form>
+
+    </p-dialog>
+    <div class="card">
+        <p-toast></p-toast>
+    </div>
+</div>
+
+
+<div class="card flex justify-content-center">
+    <p-dialog header="UpDate User" [(visible)]="visibleld" [style]="{width: '40vw'}">
+        <form [formGroup]="formUpdate"  (ngSubmit)="submitUpdate()">
+            <div class="d-flex justify-content-around mt-3">
+                <span class="p-float-label">
+                    <input pInputText id="username" formControlName="title" name="title"/>
+                    <label style="width: 300px" htmlFor="username">title</label>
+                </span>
+              
+                <span class="p-float-label">
+                    <input pInputText id="username"name="category"formControlName="category" />
+                    <label htmlFor="username">category</label>
+                </span>
+            </div>
+
+         
+            <button type="submit" class="Update_user">Update</button>
+        </form>
+    </p-dialog>
+</div>
+
+
+
+
+<div class="card flex justify-content-center">
+    <p-dialog header="Show User" [(visible)]="visibleldUser" [style]="{width: '30vw'}">
+        <i class="fa-solid fa-user user_icon_dilog"></i>
+
+       <p style="color: green ;font-size: 20px;">price:-{{price}}</p>
+       <p style="color: #155ab5 ;font-size: 20px;">discount:-{{discount}}</p>
+       <p style="color: #EC407A ;font-size: 20px;">description:-{{description}}</p>
+       <p style="color: orchid ;font-size: 20px;">category:-{{category}}</p>
+       <button class="btn_dillog" (click)="hideDilog()">OK</button>
+    </p-dialog>
+</div>

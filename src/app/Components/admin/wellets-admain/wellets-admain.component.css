@@ -1,0 +1,9 @@
+.Wallet_tabel{
+    margin-left: 17%;
+}
+
+::ng-deep .p-datatable.p-datatable-gridlines .p-datatable-thead>tr>th {
+    background-color: #EC407A !important;
+    color: white;
+    border-width: 1px 0 1px 1px;
+}

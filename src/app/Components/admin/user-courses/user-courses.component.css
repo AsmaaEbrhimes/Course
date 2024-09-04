@@ -1,0 +1,29 @@
+.course_tabel{
+    position: relative;
+    margin-left: 18rem;
+}
+
+::ng-deep .p-datatable.p-datatable-gridlines .p-datatable-thead>tr>th {
+    background-color: #EC407A !important;
+    color: white;
+    border-width: 1px 0 1px 1px;
+}
+
+.user_icon {
+    color: #155ab5;
+    text-align: center;
+    margin: auto;
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.user_icon_dilog {
+    color: #155ab5;
+    font-size: 50px;
+    margin: auto;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}

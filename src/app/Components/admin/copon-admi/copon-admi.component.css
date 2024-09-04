@@ -1,0 +1,61 @@
+::ng-deep .p-datatable>.p-datatable-wrapper {
+    overflow: auto;
+    margin-left: 16%;
+    font-size: 20px;
+}
+
+
+::ng-deep .p-datatable.p-datatable-gridlines .p-datatable-thead > tr > th {
+    background-color: #EC407A !important;
+    color: white;
+    border-width: 1px 0 1px 1px;
+}
+::ng-deep tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    border: 1px solid #d8d2d2;
+}
+
+
+::ng-deep .p-paginator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #eee;
+}
+
+::ng-deep .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+
+
+    background-color: #EC407A;
+    color: white;
+    font-weight: bolder;
+}
+
+.tabel_Card{
+    margin-left: 2rem;
+    background-color: #eee;
+    border: none;
+    border-radius: 10px;
+}
+
+.user_icon{
+    color:#155ab5;text-align: center;margin: auto;display: block;font-size: 25px;
+    cursor: pointer;
+}
+
+.user_icon_dilog{
+    color:#155ab5;
+    font-size: 50px;
+    margin: auto;display: block;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.delete_use{
+    color:red;text-align: center;margin: auto;display: block;font-size: 25px;
+    cursor: pointer;
+}

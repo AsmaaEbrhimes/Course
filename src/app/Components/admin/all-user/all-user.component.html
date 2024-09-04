@@ -1,0 +1,85 @@
+<div class="contentDishbordAllUser">
+    <div class="sidebar">
+        <app-side-bar></app-side-bar>
+    </div>
+    <app-charts-dashboard></app-charts-dashboard>
+
+    <div class="card">
+        <p-table [value]="data" styleClass="p-datatable-gridlines" [tableStyle]="{ 'width': '20rem' }"
+            [paginator]="true" [rowsPerPageOptions]="[5,10,20]" [rows]="5" [loading]="loading"
+            (onPage)="onPageChange($event)">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Id</th>
+                    <th>userName</th>
+                    <th>status</th>
+                    <th>Role</th>
+                    <th>phone</th>
+                    <th>Email</th>
+                    <th>Action Delete</th>
+                    <th>Action Update</th>
+                    <th>User</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-data>
+                <tr>
+                    <td>{{data._id}}</td>
+                    <td>{{data.userName}}</td>
+                    <td>{{data.status}}</td>
+                    <td>{{data.role}}</td>
+                    <td>{{data.phone}}</td>
+                    <td>{{data.email}}</td>
+                    <td (click)="DeleteUser(data._id)"><i class="fa-solid fa-trash delete_use"></i></td>
+                    <td (click)="UpdateUser(data)"><i class="fa-solid fa-pen Update_use"></i></td>
+                    <td (click)="showDialog(data._id)"><i class="fa-solid fa-user user_icon"></i></td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+
+
+
+</div>
+
+
+<div class="card flex justify-content-center">
+    <p-dialog [modal]="true" [(visible)]="visible" [style]="{ width: '40rem' }">
+        <i class="fa-solid fa-user user_icon_dilog"></i>
+        <h5><span style="color: #155ab5;margin-right: 10px;">User:</span>{{EmailUser}}</h5>
+        <h5><span style="color: green;margin-right: 10px;">Password:</span>{{passworduser}}</h5>
+        <h5><span style="color: #EC407A;margin-right: 10px;">Id User:</span>{{iduser}}</h5>
+        <button class="btn_dillog" (click)="hideDilog()">OK</button>
+    </p-dialog>
+</div>
+
+
+
+<div class="card flex justify-content-center">
+    <p-dialog header="UpDate User" [(visible)]="visibleld" [style]="{width: '40vw'}">
+        <form [formGroup]="form" (ngSubmit)="submitUpdate()">
+            <div class="d-flex justify-content-around mt-3">
+                <span class="p-float-label">
+                    <input pInputText id="username" formControlName="email"  name="email"/>
+                    <label style="width: 300px" htmlFor="username">email</label>
+                </span>
+              
+                <span class="p-float-label">
+                    <input pInputText id="username"name="userName"formControlName="userName" />
+                    <label htmlFor="username">userName</label>
+                </span>
+            </div>
+
+            <div class="d-flex justify-content-around mt-4">
+                <span class="p-float-label">
+                    <input pInputText id="username" name="city" formControlName="city"/>
+                    <label style="width: 300px" htmlFor="username">city</label>
+                </span>
+            </div>
+          
+            <button type="submit" class="Update_user">Update</button>
+        </form>
+    </p-dialog>
+</div>
+<div class="card">
+    <p-toast></p-toast>
+</div>

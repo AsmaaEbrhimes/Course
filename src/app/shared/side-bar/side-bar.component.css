@@ -1,0 +1,107 @@
+.sidebar {
+    position: fixed;
+    height: 99%;
+    width: 15%;
+    background: linear-gradient(rgb(93, 92, 92), rgb(6, 6, 6));
+    z-index: 1000;
+    left: 10px;
+    top: 10px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.title_side_dashboard {
+    border-bottom: 1px solid rgb(121, 118, 118);
+}
+
+.list_dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+.list_dashboard li {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: 0.5 linear;
+}
+
+.list_dashboard li:hover{
+    background: #D81B60;
+    color: white;
+}
+
+.list_dashboard li:first-child {
+    background: linear-gradient(195deg, #EC407A 0%, #D81B60 100%);
+}
+.licolor{
+background-color: #D81B60;
+}
+.btn_side_one_dashboard{
+    width: 90%;
+    margin-left: 15px;
+    padding: 14px;
+   
+    background-color: transparent;
+    border: none;
+    color: white;
+    border: 1px solid #D81B60;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.btn_side_dashboard {
+    width: 90%;
+    margin-left: 15px;
+    padding: 14px;
+    margin-top: 10px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    background: linear-gradient(195deg, #EC407A 0%, #D81B60 100%);
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.list_dashboard li i{
+    margin-right: 10px;
+}
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .sidebar {
+        visibility: hidden;  
+          }
+}
+
+@media (min-width: 767px) and (max-width: 1200px) {
+   .sidebar .list_dashboard li {
+        font-size: 10px !important; 
+    }
+    .sidebar {
+        visibility: hidden;  
+          }
+        
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+   .sidebar .list_dashboard li {
+        font-size: 10px !important;
+    }
+    .sidebar {
+        visibility: hidden;  
+          }   
+} 
+
+
+@media (min-width: 1400px) and (max-width: 1720px) {
+    .sidebar .list_dashboard li {
+         font-size: 15px !important;
+     }
+     
+ } 

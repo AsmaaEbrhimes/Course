@@ -1,0 +1,461 @@
+.CostumClass {
+    background-color: #155ab5 !important;
+}
+
+.content_header,
+.list_header,
+.header_img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bar_icon {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.btn_signin {
+    position: relative;
+    border: none;
+    padding: 10px;
+    background-color: #155ab5 !important;
+    color: white;
+    font-size: 25px;
+    z-index: 11111;
+    width: 10%;
+}
+
+.btn_signin::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -111;
+    padding: 10px;
+    color: white;
+    transform: scale(0);
+    transition: 0.3s linear;
+
+}
+
+.btn_signin:hover::before {
+    transform: scale(1);
+}
+
+.header_content ul li {
+    font-size: 20px;
+    color: #155ab5 !important;
+    font-size: 25px;
+    position: relative;
+    cursor: pointer;
+}
+
+.parent_list {
+    position: relative;
+}
+
+.child_list {
+    position: absolute;
+    padding: 10px;
+    width: 200px;
+    z-index: 111;
+    background-color: rgb(247, 247, 247);
+    border-radius: 10px;
+    margin-top: 60px;
+    padding: 10px;
+    width: 200px;
+    z-index: 111;
+    opacity: 0;
+    transition: 0.3s linear;
+}
+
+
+.child_list::after{
+    content: "";
+    position: absolute;
+   border-width: 20px;
+     border-color: transparent transparent rgb(247, 247, 247) transparent;
+   border-style: solid;
+   top:-37px;
+   right:9px;
+}
+
+.parent_list:hover .child_list {
+    opacity: 1;
+    margin-top: 20px;
+}
+
+
+
+
+.child_list li {
+    margin-top: 10px;
+    color: white;
+    transition: 0.3s linear;
+}
+
+.child_side_list li {
+    color: white !important;
+}
+
+.child_list li:hover {
+   border: 4px solid #155ab5;
+    color: black !important;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+::ng-deep .p-dialog .p-dialog-content:last-of-type {
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    background-color: #deecff;
+}
+
+::ng-deep .p-input-icon-right>.p-inputtext {
+    padding-right: 2.5rem;
+    width: 100%;
+    width: 750px;
+}
+
+::ng-deep .p-dialog .p-dialog-header {
+    border-bottom: 0 none;
+    background: #ffffff;
+    color: #374151;
+    padding: 1.5rem;
+    background-color: #deecff;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+
+::ng-deep .p-dropdown .p-dropdown-label.p-placeholder {
+    color: #6c757d;
+    min-width: 230px;
+    max-width: 230px;
+}
+
+::ng-deep button,
+input,
+optgroup,
+select,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    width: 100%;
+}
+
+::ng-deep .p-dialog .p-dialog-header .p-dialog-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    font-family: "Cairo", sans-serif !important;
+}
+
+
+.btn_auth {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%;
+    margin: auto;
+
+}
+
+.btn_auth button {
+    border: none;
+    padding: 10px;
+    background: black;
+    color: white;
+    margin-left: 10px;
+    width: 40%;
+    height: 60px;
+    border-radius: 25px;
+
+}
+
+.btn_action_auth button {
+    border: none;
+    padding: 10px;
+    color: white;
+    margin-left: 10px;
+    width: 25%;
+    border-radius: 5px;
+    color: black;
+    font-size: 20px;
+    border: 1px solid white;
+    transition: 0.3s linear;
+}
+
+.btn_action_auth button:hover {
+    background-color: black;
+    color: white;
+}
+
+.success-checkmark {
+    width: 80px;
+    height: 115px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    z-index: 1111111;
+}
+
+.check-icon {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    border-radius: 50%;
+    box-sizing: content-box;
+    border: 4px solid #4CAF50;
+    z-index: 1111111;
+
+}
+
+.check-icon::before,
+.check-icon::after {
+    content: '';
+    height: 100px;
+    position: absolute;
+    transform: rotate(-45deg);
+}
+
+.check-icon::before {
+    top: 3px;
+    left: -2px;
+    width: 30px;
+    transform-origin: 100% 50%;
+    border-radius: 100px 0 0 100px;
+}
+
+.check-icon::after {
+    top: 0;
+    left: 30px;
+    width: 60px;
+    transform-origin: 0 50%;
+    border-radius: 0 100px 100px 0;
+    animation: rotate-circle 4.25s ease-in;
+}
+
+.icon-line {
+    height: 5px;
+    background-color: #4CAF50;
+    display: block;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+}
+
+.line-tip {
+    top: 46px;
+    left: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+    animation: icon-line-tip 0.75s;
+}
+
+.line-long {
+    top: 38px;
+    right: 8px;
+    width: 47px;
+    transform: rotate(-45deg);
+    animation: icon-line-long 0.75s;
+}
+
+.icon-circle {
+    top: -4px;
+    left: -4px;
+    z-index: 10;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    box-sizing: content-box;
+    border: 4px solid rgba(76, 175, 80, .5);
+}
+
+.icon-fix {
+    top: 8px;
+    width: 5px;
+    left: 26px;
+    z-index: 1;
+    height: 85px;
+    position: absolute;
+    transform: rotate(-45deg);
+}
+
+.error {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    z-index: 1111;
+}
+
+.err {
+    font-size: 20px;
+    height: 70px;
+    width: 70px;
+    line-height: 70px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: red;
+}
+
+
+.sidebar_li {
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: #155ab5;
+    transition: 0.3s linear;
+}
+
+.sidebar_li:first-child {
+    background-color: #eee;
+}
+
+.sidebar_li:hover {
+    background-color: #eee;
+}
+
+.btn_close {
+    position: absolute;
+    bottom: 0;
+    border: none;
+    background-color: #155ab5;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+
+}
+
+.child_side_list {
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    width: 100%;
+    z-index: 1111;
+    margin-top: 10px;
+    display: none;
+    left: 0;
+ 
+}
+
+.child_side_list li{
+    color: #155ab5 !important;
+    transition: 0.3s linear;
+}
+.child_side_list li:hover {
+    background-color: #155ab5;
+    padding: 10px;
+    border-radius: 5px;
+    color: white !important;
+}
+
+.sidebar_li:nth-child(3):hover .child_side_list {
+    display: block;
+}
+
+.child_side_list li {
+    margin-bottom: 10px;
+
+}
+
+
+
+@media (min-width:320px) and (max-width:767px) {
+    ::ng-deep .p-input-icon-right>.p-inputtext {
+        width: 100%
+    }
+
+
+    .btn_signin {
+        font-size: 10px;
+        width: 30%;
+    }
+
+    .child_list {
+        flex-direction: column;
+    }
+
+    .bar_icon {
+        display: block;
+    }
+
+    .header_img {
+        display: none;
+    }
+
+    .btn_auth {
+        font-size: 10px;
+        width: 100%;
+    }
+
+    .btn_auth button {
+        width: 100%;
+    }
+
+    .btn_action_auth button {
+        width: 100%;
+        font-size: 15px;
+    }
+}
+
+
+
+
+@media (min-width:767px) and (max-width:1200px) {
+    ::ng-deep .p-input-icon-right>.p-inputtext {
+        width: 560px
+    }
+
+    .header_img {
+        display: none;
+    }
+
+    .btn_signin {
+        font-size: 20px;
+        width: 30%;
+    }
+
+    .bar_icon {
+        display: block;
+    }
+
+}
+
+@media (min-width:1200px) and (max-width:1400px) {
+    .btn_signin {
+        font-size: 25px;
+        width: 20%;
+    }
+
+
+    .header_img .list_header li {
+        font-size: 20px;
+    }
+}
+
+
+@media (min-width:1400px) and (max-width:1720px) {
+    .btn_signin {
+        font-size: 25px;
+        width: 20%;
+    }
+}

@@ -1,0 +1,45 @@
+<div class="contentDishbordAllUser">
+    <div class="sidebar">
+        <app-side-bar></app-side-bar>
+    </div>
+    <app-charts-dashboard></app-charts-dashboard>
+
+
+
+    <div  class="card Wallet_tabel" style="background-color: #eee">
+        <p-table  [value]="AllWellect"   styleClass="p-datatable-gridlines" [tableStyle]="{ 'width': '20rem' }">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>wallet</th>
+                    <th>userName</th>
+                    <th>status</th>
+                    <th>role</th>
+                    <th>phone</th>
+                    <th>invitation</th>
+                    <th>email</th>
+                    <th>createdAt</th>
+                    <th>copone</th>
+                    <th>city</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-AllWellect>
+                <tr>
+                    <td>{{AllWellect.wallet}}</td>
+                    <td>{{AllWellect.user.userName}}</td>
+                    <td>{{AllWellect.user.status}}</td>
+                    <td>{{AllWellect.user.role}}</td>
+                    <td>{{AllWellect.user.phone}}</td>
+                    <td>{{AllWellect.user.invitation}}</td>
+                    <td>{{AllWellect.user.email}}</td>
+                    <td>{{AllWellect.user.createdAt}}</td>
+                    <td>{{AllWellect.user.copone}}</td>
+                    <td>{{AllWellect.user.city}}</td>
+                 
+
+             
+                    
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>

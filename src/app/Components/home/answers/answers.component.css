@@ -1,0 +1,41 @@
+::ng-deep .p-accordion-header-text {
+    line-height: 1;
+    font-size: 30px;
+    color: #155ab5;
+    position: absolute;
+    right: 5px;
+    padding: 10px;
+}
+
+::ng-deep .p-accordion .p-accordion-content {
+    padding: 1.25rem;
+    border: 1px solid #dee2e6;
+    background: #ffffff;
+    color: #495057;
+    border-top: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    color: #155ab5;
+    font-size: 25px;
+}
+
+@media (min-width:320px) and (max-width:767px) {
+    ::ng-deep .p-accordion-header-text{
+        font-size: 15px;
+    }
+    ::ng-deep .p-accordion .p-accordion-content{
+        font-size: 15px;
+    }
+}
+
+
+@media (min-width:767px) and (max-width:1200px) {
+    ::ng-deep .p-accordion-header-text{
+        font-size: 15px;
+    }
+    ::ng-deep .p-accordion .p-accordion-content{
+        font-size: 15px;
+    }
+}

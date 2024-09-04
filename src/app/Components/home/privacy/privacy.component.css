@@ -1,0 +1,118 @@
+.tiltle_privacy {
+    text-align: center;
+    margin: auto;
+    font-size: 50px;
+    font-weight: bold;
+    color: #155ab5;
+    margin-top: 100px;
+}
+
+.cards {
+    text-align: right;
+    margin-bottom: 100px;
+}
+
+
+.content_privacy .cards h3 {
+    color: #155ab5;
+
+    font-weight: bold;
+}
+
+.line{
+    position: absolute;
+    background-color: red;
+    height: 3px;
+
+    right:50px;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.line_1{
+    width: 26%;
+}
+
+
+.line_2{
+    width: 14%;
+}
+
+.line_3{
+    width: 11%;
+}
+
+.line_4{
+    width: 11%;
+}
+
+.line_5{
+    width: 7%;
+}
+
+.line_6{
+    width: 6%;
+}
+
+.line_7{
+    width: 10%;
+}
+
+.line_8{
+    width: 10%;
+}
+
+.line_9{
+    width: 10%;
+}
+
+.line_10{
+    width: 22%;
+}
+
+.line_11{
+    width: 8%;
+}
+.line_12{
+    width: 6%;
+}
+.content_privacy .cards h4{
+    margin-top: 40px;
+    color: red;
+    font-size: 25px;
+}
+
+.desc_privacy{
+    position: relative;
+    margin-top: 40px;
+}
+
+.desc_privacy p{
+font-size: 20px;
+letter-spacing: 1px;
+font-weight:500;
+}
+
+@media (min-width:320px) and (max-width:767px){
+    .line{
+        height: 0;
+    }
+}
+
+@media (min-width:767px) and (max-width:1200px){
+    .line{
+        height: 0;
+    }
+}
+    @media (min-width:1200px) and (max-width:1400px){
+        .line{
+            height: 0 !important;
+        }
+    }
+
+
+@media (min-width:1400px) and (max-width:1715px){
+    .line{
+        height: 0 !important;
+    }
+}

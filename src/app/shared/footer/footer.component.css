@@ -1,0 +1,74 @@
+.content-footer{
+    margin-top: 20px;
+    background: #222d4b;
+    background-image: url("../../../assets/images/world-map.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    
+
+    
+}
+
+.logo_footer{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    text-align: center;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.list_flex{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    color:#fff;
+    text-align: center;
+    flex-wrap: wrap;
+    
+}
+
+
+.list_flex ul li{
+    margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.list_flex ul li:not(:first-child) {
+    color: #cccccc;
+}
+
+
+.list_flex ul li i{
+    color: white;
+    font-size: 30px;
+    color: black;
+  border-radius: 10px;
+  background-color: white;
+  margin-left: 10px;
+  transition: 0.5s linear;
+}
+
+.icon_footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon_footer li i{
+    padding: 10px;
+}
+
+.icon_footer li{
+    margin-left: 1px;
+    transition: 0.5s linear;
+}
+
+.list_flex ul li i:hover{
+    background-color: black;
+    color: white;
+}

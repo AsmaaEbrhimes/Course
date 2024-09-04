@@ -1,0 +1,73 @@
+<div class="contentDishbordAllUser">
+    <div class="sidebar">
+        <app-side-bar></app-side-bar>
+    </div>
+    <app-charts-dashboard></app-charts-dashboard>
+
+
+
+ 
+    <div  class="card course_tabel" style="background-color: #eee">
+        <p-table [value]="coursesUser"  styleClass="p-datatable-gridlines" [tableStyle]="{ 'width': '20rem' }">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>price</th>
+                    <th>wallet</th>
+                    <th>userName</th>
+                    <th>status</th>
+                    <th>role</th>
+                    <th>phone</th>
+                    <th>email</th>
+                    <th>invitation</th>
+                    <th>copone</th>
+                    <th>city</th>
+                    <th>priceToRegister</th>
+                    <th>Id</th>
+                    <th>User</th>
+                    <th>DeleteAcTion</th>
+                  
+
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-coursesUser>
+                <tr>
+                    <td>{{coursesUser.price}}</td>
+                    <td>{{coursesUser.priceToRegister}}</td>
+                    <td>{{coursesUser.user.city}}</td>
+                    <td>{{coursesUser.user.copone}}</td>
+                    <td>{{coursesUser.user.invitation}}</td>
+                    <td>{{coursesUser.user.email}}</td>
+                    <td>{{coursesUser.user.phone}}</td>
+                    <td>{{coursesUser.user.role}}</td>
+                    <td>{{coursesUser.user.status}}</td>
+                    <td>{{coursesUser.user.userName}}</td>
+                    <td>{{coursesUser.user.wallet}}</td>
+                    <td>{{coursesUser.user._id}}</td>
+              <td (click)="showDialog(coursesUser.user._id)"><i class="fa-solid fa-user user_icon"></i></td>
+              <td (click)="DeleteCoponAdmin(coursesUser._id)"><i class="fa-solid fa-trash delete_use"></i></td> 
+                </tr>
+            </ng-template>
+        </p-table>
+
+        <p-dialog [modal]="true" [(visible)]="visible" [style]="{ width: '40rem' }">
+            <i class="fa-solid fa-user user_icon_dilog"></i>
+            <h5><span style="color: #155ab5;margin-right: 10px;">User</span></h5>
+         
+           <button class="btn_dillog" (click)="hideDilog()">OK</button>
+        </p-dialog>
+
+        <div class="card flex justify-content-center">
+            <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="120"
+                [rowsPerPageOptions]="[10, 20, 30]"></p-paginator>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+</div>

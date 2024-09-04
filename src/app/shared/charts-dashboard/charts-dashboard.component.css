@@ -1,0 +1,362 @@
+.content_All_user {
+    margin-left: 15%;
+    margin-top: 18px;
+    padding: 20px;
+    background-color: #eee;
+    z-index: 11111;
+
+}
+
+.content_All_user_two {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20%;
+    padding: 20px;
+    background-color: #eee;
+    z-index: 11111;
+}
+
+
+
+.Start {
+    background-color: #ccc;
+    padding: 5px;
+    font-size: 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+    height: 35px;
+}
+
+.number {
+    background-color: #ccc;
+    padding: 5px;
+    font-size: 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.card_1 {
+    background-color: white;
+    width: 20%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: right;
+    height: 200px;
+
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.card_1 .salary {
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: 1px solid rgb(174, 168, 168);
+    position: relative;
+    top: -40px
+}
+
+.card_1 p {
+    margin-bottom: 25px;
+}
+
+.card_1 .icon {
+    position: relative;
+    text-align: left;
+    display: block;
+    font-size: 30px;
+    width: fit-content;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    top: -30px;
+    box-shadow: 0 0 10px black;
+}
+
+.card_1:nth-child(1) {
+    border-left: 5px solid rgba(60, 58, 58, 0.927);
+}
+
+
+.card_1:nth-child(2) {
+    border-left: 5px solid green;
+}
+
+.card_1:nth-child(3) {
+    border-left: 5px solid #EC407A;
+}
+
+.card_1:nth-child(4) {
+    border-left: 5px solid #155ab5;
+}
+
+
+.card_1 .icon_1 {
+    background-color: rgba(60, 58, 58, 0.927);
+}
+
+.card_1 .icon_2 {
+    background-color: green;
+}
+
+.card_1 .icon_3 {
+    background: linear-gradient(195deg, #EC407A 0%, #D81B60 100%)
+}
+
+.card_1 .icon_4 {
+    background-color: #155ab5 !important;
+
+}
+
+.card_1 p:last-child {
+    text-align: left;
+}
+
+.desc_last {
+    position: relative;
+    top: -40px;
+}
+
+
+.charts {
+    background-color: #eee;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.cards_1 {
+    position: relative;
+    background-color: white;
+    width: 510px;
+    /* margin-left: 40px; */
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+
+}
+
+.cards_1:first-child {
+    margin-left: 15%;
+}
+
+.last_desc_char {
+    font-size: 20px;
+    color: rgb(66, 64, 64);
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(235, 229, 229);
+}
+
+
+
+.desc_chart h4 {
+    font-weight: bold;
+}
+
+.desc_chart p:last-child {
+
+    font-size: 20px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.char_cards {
+    height: 300px;
+    width: 300px;
+    margin-left: 20%
+}
+
+.bars {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    background-color: #D81B60;
+    color: white;
+    border-radius: 50%;
+    width: fit-content;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.tille_dash {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgb(163, 161, 161);
+    padding: 20px;
+}
+
+
+
+
+.btn_side_one_dashboard {
+    width: 90%;
+    margin-left: 15px;
+    padding: 14px;
+
+    background-color: transparent;
+    border: none;
+    color: white;
+    border: 1px solid #D81B60;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.btn_side_dashboard {
+    width: 90%;
+    margin-left: 15px;
+    padding: 14px;
+    margin-top: 10px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    background: linear-gradient(195deg, #EC407A 0%, #D81B60 100%);
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+::ng-deep .p-sidebar .p-sidebar-header+.p-sidebar-content {
+    padding-top: 0;
+    color: white;
+    font-size: 20px;
+    background: linear-gradient(rgb(93, 92, 92), rgb(6, 6, 6));
+}
+
+::ng-deep .p-sidebar .p-sidebar-header {
+    display: none;
+}
+
+::ng-deep .p-sidebar .p-sidebar-footer {
+    display: none;
+}
+
+.menue_width {
+    background-color: #D81B60;
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+}
+
+@media (min-width:320px) and (max-width:767px) {
+
+    .charts{
+        background-color: white;
+    }
+    .sidebar {
+        display: none;
+    }
+
+    .bars {
+        display: block;
+    }
+
+    .cards_1 {
+        width: 90%;
+    }
+
+    .char_cards {
+        margin-left: 5%;
+    }
+
+    .cards_1:first-child {
+        margin-left: 1%;
+    }
+
+    .cards_1:first-child {
+        position: relative;
+        margin-left: 8%;
+    }
+
+    .content_All_user {
+        background-color: transparent;
+    }
+
+    .content_All_user_two {
+        flex-direction: column;
+        justify-content: center;
+        background-color: white;
+    }
+
+    .content_All_user_two .card_1 {
+        width: 85%;
+        padding: 0;
+        margin-top: 50px;
+        border: 1px solid rgb(158, 155, 155);
+        padding: 10px;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 1200px) {
+
+    .charts{
+        background-color: white;
+    }
+    .sidebar {
+        display: none !important;
+    }
+
+    .bars {
+        display: block;
+    }
+
+    .cards_1:first-child {
+        margin-left: 1%;
+    }
+
+    .content_All_user_two {
+        flex-direction: column;
+        justify-content: center;
+        background-color: white;
+
+    }
+
+    .content_All_user_two .card_1 {
+        width: 100%;
+        padding: 0;
+        margin-top: 50px;
+        border: 1px solid rgb(158, 155, 155);
+        padding: 10px;
+     
+    }
+
+    .content_All_user {
+        background-color: transparent;
+    }
+}
+
+@media (min-width: 1200px) and (max-width:1400px) {
+  
+    .charts{
+        background-color: white;
+    }
+    .sidebar {
+        visibility: hidden !important;
+    }
+
+    .bars {
+        display: block;
+    }
+
+    .cards_1:first-child {
+        position: relative;
+        margin-left: 8%;
+    }
+
+    .content_All_user {
+        background-color: transparent;
+    }
+
+    .content_All_user_two {
+        background-color: white;
+    }
+
+}

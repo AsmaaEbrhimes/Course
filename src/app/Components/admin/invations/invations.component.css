@@ -1,0 +1,49 @@
+.invention_tabel{
+    margin-left: 17%;
+    border: none;
+}
+
+
+
+::ng-deep .p-datatable.p-datatable-gridlines .p-datatable-thead>tr>th {
+    background-color: #EC407A !important;
+    color: white;
+    border-width: 1px 0 1px 1px;
+}
+
+.delete_use {
+    color: red;
+    text-align: center;
+    margin: auto;
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+@media (min-width:320px) and (max-width:767px) {
+    .sidebar {
+visibility: hidden;  
+  }
+
+  
+    .invention_tabel{
+        margin-left: 4%;
+    }
+}
+
+@media (min-width:767px) and (max-width:1200px) {
+    .sidebar {
+        display: none;
+    }
+
+    .invention_tabel{
+        margin-left: 1rem;
+    }
+}
+
+@media (min-width:1200px) and (max-width:1400px) {
+    .sidebar {
+        display: none;
+    }
+}

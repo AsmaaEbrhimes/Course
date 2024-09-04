@@ -1,0 +1,179 @@
+<div class="header_content">
+    <div class="Container">
+        <div class=" content_header">
+            <button class="btn_signin" (click)="showDialog()">تسجيل الد خول</button>
+            <i (click)="sidebarVisible = true" class="fa-solid fa-bars bar_icon"></i>
+            <div class=" header_img">
+                <ul class=" list_header">
+                    <li class="p-4" [routerLink]="['/contact']">تواصل معنا </li>
+                    <li class="p-4" [routerLink]="['/price']"> الاسعار </li>
+                    <li class="p-4 parent_list" [routerLink]="['/course']"> الكورسات
+                        <ul class="child_list">
+                            <li>Course Grid 2</li>
+                            <li>Course Grid 3</li>
+                            <li>Course Grid 4</li>
+                        </ul>
+                    </li>
+                    <li [routerLink]="['/answer']" class="p-4"> الاسئله الشائعه </li>
+                    <li class="p-4" [routerLink]="['/about']"> من نحن </li>
+                    <li class="p-4" [routerLink]="['/']"> الرئيسيه </li>
+                </ul>
+                <img [routerLink]="['/']" style="width: 130px;height:130px" src="assets/images/Logo-BLUE.png" />
+            </div>
+        </div>
+    </div>
+
+    <div class=" flex justify-content-center" style="z-index:9999999">
+        <p-dialog header="تسجيل دخول العميل" [modal]="true" [(visible)]="visible" [style]="{ width: '50rem' }"
+            [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }">
+            <div class="d-flex justify-content-center btn_auth">
+                <button [ngClass]="{'CostumClass': isRegistered}" (click)="ShowRegister()">تسجيل الدخول لاول
+                    مره</button>
+                <button [ngClass]="{'CostumClass': islogin}" (click)="ShowLogin()">تسجيل دخول</button>
+            </div>
+
+            <div class="register_form" *ngIf="register">
+
+
+
+
+
+
+                <form (submit)="CreateAccount($event)" [formGroup]="formRegister">
+                    <div style="margin-bottom: 30px;margin-top: 30px;">
+                        <span class="p-float-label">
+                            <input pInputText id="username" formControlName="email" />
+                            <label for="username">Email</label>
+                        </span>
+
+                        <ng-container
+                            *ngIf="formRegister.get('email')?.hasError('required') && formRegister.get('email')?.touched">
+                            <p style="color: red;">حقل الايميل مطلوب</p>
+                        </ng-container>
+
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <span class="p-float-label">
+                            <input pInputText id="username" formControlName="password" />
+
+                            <label for="username">password</label>
+                        </span>
+                        <ng-container
+                            *ngIf="formRegister.get('password')?.hasError('required') && formRegister.get('password')?.touched">
+                            <p style="color: red;">حقل الباسورد مطلوب</p>
+                        </ng-container>
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <span class="p-float-label">
+
+                            <input pInputText id="username" formControlName="phone" />
+
+                            <label for="username">Number</label>
+                        </span>
+                        <ng-container
+                            *ngIf="formRegister.get('phone')?.hasError('required') && formRegister.get('phone')?.touched">
+                            <p style="color: red;">حقل الموبايل مطلوب</p>
+                        </ng-container>
+
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <span class="p-float-label">
+
+                            <input pInputText id="username" formControlName="userName" />
+                            <label for="username">User Name</label>
+                        </span>
+                        <ng-container
+                            *ngIf="formRegister.get('userName')?.hasError('required') && formRegister.get('userName')?.touched">
+                            <p style="color: red;">حقل الاسم مطلوب</p>
+                        </ng-container>
+
+
+                    </div>
+                    <div class="d-flex justify-content-center btn_action_auth">
+                        <button type="submit" [disabled]="formRegister.invalid">حفظ & اكمال</button>
+                        <button> الغاء</button>
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="login_form" *ngIf="login">
+                <form (submit)="LoginAccount($event)" [formGroup]="formLogin">
+                    <div style="margin-bottom: 30px; margin-top: 30px;">
+                        <span class="p-float-label">
+
+                            <!-- <input pInputText id="username" formControlName="password" /> -->
+                            <p-password formControlName="password" [toggleMask]="true"></p-password>
+
+                            <label for="username">Password</label>
+                        </span>
+                        <p style="color:red ;"
+                            *ngIf="formLogin?.get('password')?.invalid && formLogin.get('password')?.touched && formLogin?.get('password')?.dirty">
+                            The Field
+                            password Is Required</p>
+                    </div>
+
+
+                    <div style="margin-bottom: 30px;margin-top: 30px;">
+                        <span class="p-float-label">
+
+                            <input pInputText id="username" formControlName="phone" />
+                            <label for="username">phone</label>
+                        </span>
+                        <p *ngIf="formLogin?.get('phone')?.hasError('maxlength') && (formLogin?.get('phone')?.touched || formLogin?.get('phone')?.dirty)"
+                            style="color:red;">
+                            Phone number cannot be more than 13 characters long
+                        </p>
+
+                        <p *ngIf="formLogin?.get('phone')?.hasError('required') && !formLogin?.get('phone')?.hasError('maxlength') && (formLogin?.get('phone')?.touched || formLogin?.get('phone')?.dirty)"
+                            style="color:red;">
+                            Phone is required
+                        </p>
+                    </div>
+                    <div class="d-flex justify-content-center btn_action_auth">
+                        <button type="submit" [disabled]="formLogin.invalid">حفظ & اكمال</button>
+                        <button> الغاء</button>
+                    </div>
+                </form>
+            </div>
+        </p-dialog>
+    </div>
+    <div class="">
+        <p-toast></p-toast>
+    </div>
+
+</div>
+
+
+<div class=" flex justify-content-center">
+    <p-sidebar [(visible)]="sidebarVisible">
+        <img [routerLink]="['/']"
+            style="width: 130px;height:130px; margin: auto; text-align: center;display: block;margin-bottom: 20px;"
+            src="assets/images/Logo-BLUE.png" />
+
+        <ul>
+            <li class="sidebar_li" [routerLink]="['/contact']">تواصل معنا </li>
+            <li class="sidebar_li" [routerLink]="['/price']"> الاسعار </li>
+            <li class=" sidebar_li " [routerLink]="['/course']">
+                <div class="d-flex justify-content-between justify-content-center">
+                    <p>الكورسات</p>
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+
+                <ul class="child_side_list">
+                    <li>Course Grid 2</li>
+                    <li>Course Grid 3</li>
+                    <li>Course Grid 4</li>
+                </ul>
+            </li>
+            <li [routerLink]="['/answer']" class="sidebar_li"> الاسئله الشائعه </li>
+            <li class="sidebar_li" [routerLink]="['/about']"> من نحن </li>
+            <li class="sidebar_li" [routerLink]="['/']"> الرئيسيه </li>
+
+        </ul>
+        <button (click)="sidebarVisible = false" class="btn_close">اغلاق</button>
+    </p-sidebar>
+</div>

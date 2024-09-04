@@ -1,0 +1,77 @@
+.form_contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    background-color: black;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    border-radius: 20px;
+    position: relative;
+
+}
+
+.conten_contact{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+::ng-deep .p-inputtext {
+    margin: 0;
+    width: 300px;
+}
+
+.contact_btns {
+    width: 100%;
+    text-align: right;
+    margin-top: 20px;
+}
+
+.btn_contact {
+    width: 20%;
+    text-align: right;
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+.inp{
+    margin-left: 30px;
+}
+
+
+@media (min-width:320px) and (max-width:767px){
+    .conten_contact{
+        flex-direction: column;
+    }
+
+    .form_contact{
+        width: 100%;
+    }
+
+    .contact_btns button{
+        width: 100%;
+    }
+
+    ::ng-deep .p-inputtext{
+       width: 200px;
+       margin-top: 30px;
+    }
+}
+
+
+
+@media (min-width:767px) and (max-width:1200px){
+    .conten_contact{
+        flex-direction: column;
+    }
+    .contact_btns button{
+        width: 100%;
+    }
+
+}

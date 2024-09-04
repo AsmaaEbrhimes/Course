@@ -1,0 +1,25 @@
+    <div class="sidebar">
+
+        <div class="d-flex justify-content-center mt-4 title_side_dashboard">
+            <img style="width:50px;height:35px;margin-right: 10px;" src="assets/images/logo-ct.png" />
+            <p style="color:white;font-size: 23px;">Dashboard</p>
+        </div>
+
+        <ul class="list_dashboard">
+            <li [ngClass]="{'licolor': activeItem === 1}"  (click)="setActive(1)"    [routerLink]="['/adminDishboard/user']">All User</li>
+            <li [ngClass]="{'licolor': activeItem === 2}"  (click)="setActive(2)" [routerLink]="['/adminDishboard/CorseUser']"> <i class="fa-brands fa-discourse"></i>Get All Courses</li>
+            <li [ngClass]="{'licolor': activeItem === 3}" (click)="setActive(3)"  [routerLink]="['/adminDishboard/coponAdmin']">  <i class="fa-solid fa-sack-xmark"></i> Get All Copon</li>
+            <li [ngClass]="{'licolor': activeItem === 4}" (click)="setActive(4)" [routerLink]="['/adminDishboard/courseUser']"> <i class="fa-solid fa-gauge"></i>Courses User</li>
+            <li [ngClass]="{'licolor': activeItem === 5}"  (click)="setActive(5)" [routerLink]="['/adminDishboard/WellectAdmin']"><i class="fa-solid fa-stopwatch-20"></i>All All Wellect</li>
+            <li [ngClass]="{'licolor': activeItem === 6}" (click)="setActive(6)" [routerLink]="['/adminDishboard/Invetions']"><i class="fa-solid fa-shield-virus"></i>All All inventions</li>
+            <li [ngClass]="{'licolor': activeItem === 7}" (click)="setActive(7)" ><i class="fa-solid fa-gauge"></i>All All Copones</li>
+            <li [ngClass]="{'licolor': activeItem === 8}" (click)="setActive(8)" ><i class="fa-solid fa-address-card"></i>Register</li>
+            <li [ngClass]="{'licolor': activeItem === 9}" (click)="setActive(9)" ><i class="fa-solid fa-user-plus"></i> Login</li>
+        </ul>
+        
+        <button class="btn_side_one_dashboard">Documantion</button>
+        <button class="btn_side_dashboard">Home Pages</button>
+    </div>
+
+    
+

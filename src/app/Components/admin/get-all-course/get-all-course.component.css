@@ -1,0 +1,241 @@
+.contentDishbordAllUser {
+    overflow: hidden;
+}
+
+::ng-deep .p-datatable>.p-datatable-wrapper {
+    overflow: auto;
+    margin-left: 16%;
+    font-size: 20px;
+}
+
+.createCourse {
+    padding-left: 30px;
+    text-align: center;
+    color: green;
+    font-weight: bolder;
+    cursor: pointer;
+
+}
+
+::ng-deep .p-datatable.p-datatable-gridlines .p-datatable-thead>tr>th {
+    background-color: #EC407A !important;
+    color: white;
+    border-width: 1px 0 1px 1px;
+}
+
+
+::ng-deep .p-paginator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #eee;
+}
+
+::ng-deep tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    border: 1px solid #d8d2d2;
+}
+
+::ng-deep .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+
+
+    background-color: #EC407A;
+    color: white;
+    font-weight: bolder;
+}
+
+
+::ng-deep .p-calendar-w-btn .p-datepicker-trigger {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: #EC407A;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.upload_img {
+    border: 1px solid rgb(204, 196, 196);
+    padding: 10px;
+    width: 35%;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn_dillog{
+    background-color: #155ab5;
+    margin: auto;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    width: 30%;
+}
+
+
+
+.user_icon_dilog{
+    color:#155ab5;
+    font-size: 50px;
+    margin: auto;display: block;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+.uplod_video {
+    width: 100%;
+    border: 1px solid rgb(204, 196, 196);
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+.uplod_video i{
+    margin-left: 10px;
+    color: #EC407A;
+    font-size: 25px;
+}
+.upload_img i {
+    margin-left: 10px;
+    color: #EC407A;
+    font-size: 25px;
+
+}
+
+.delete_use {
+    color: red;
+    text-align: center;
+    margin: auto;
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.invalid {
+    opacity: 0.8;
+    cursor: no-drop;
+}
+
+.btn_dillog {
+    background-color: #155ab5;
+    margin: auto;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    width: 30%;
+}
+
+.Update_use {
+    color: green;
+    text-align: center;
+    margin: auto;
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.user_icon {
+    color: #155ab5;
+    text-align: center;
+    margin: auto;
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+
+.user_icon_dilog {
+    color: #155ab5;
+    font-size: 50px;
+    margin: auto;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+.Update_use{
+    color:green;text-align: center;margin: auto;display: block;font-size: 25px;
+    cursor: pointer;
+}
+
+
+
+.Update_user{
+    width: 100%;
+    background-color: #EC407A;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+
+.createCourses {
+    border: none;
+    background-color: #EC407A;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+
+}
+
+.plus_icon {
+    cursor: pointer;
+    background-color: #EC407A;
+    color: white;
+    border-radius: 50%;
+    border: 1px solid white;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+@media (min-width:320px) and (max-width:767px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+@media (min-width:767px) and (max-width:1200px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+@media (min-width:1200px) and (max-width:1400px) {
+    .sidebar {
+        display: none;
+    }
+}

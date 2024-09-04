@@ -1,0 +1,116 @@
+    <div class="content_All_user">
+        <div class="d-flex align-items-center justify-content-between">
+            <p style="font-size:25px"><span style="color: rgb(128, 127, 127)">Pages</span>/<span>Dashboard</span></p>
+            
+            <div>
+                <div class="d-flex">
+                    <div class="Start">
+                        <i class="fa-regular fa-star"></i>
+                        <span>Star</span>
+                    </div>
+                    <p class="number">10,982</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <i (click)="sidebarVisible = true" class="fa-solid fa-bars bars"></i>
+
+        <div class="card flex justify-content-center">
+            <p-sidebar [(visible)]="sidebarVisible">
+                <h3 class="tille_dash">DashBoard <i class="fa-solid fa-gauge-high"></i></h3>
+                <ul class="list_dashboard_sidebar">
+                    <li>All User</li>
+                    <li [routerLink]="['/adminDishboard/CorseUser']"> <i class="fa-brands fa-discourse"></i>Get All Courses</li>
+                    <li> <i class="fa-solid fa-gauge"></i> All All Copones</li>
+                    <li> <i class="fa-solid fa-gauge"></i>All All Copones</li>
+                    <li><i class="fa-solid fa-gauge"></i>All All Copones</li>
+                    <li><i class="fa-solid fa-gauge"></i>All All Copones</li>
+                    <li><i class="fa-solid fa-gauge"></i>All All Copones</li>
+                    <li><i class="fa-solid fa-address-card"></i>Register</li>
+                    <li><i class="fa-solid fa-user-plus"></i> Login</li>
+                </ul>
+                <div style="position:absolute;bottom:20px">
+                    <button class="btn_side_one_dashboard">Documantion</button>
+                    <button class="btn_side_dashboard">Home Pages</button>
+                </div>
+             
+            </p-sidebar>
+        </div>
+    </div>
+
+
+    <div class=" content_All_user_two">
+        <div class="card_1">
+            <i class="fa-solid fa-inbox icon_1 icon"></i>
+            <p style="position:relative;top:-20px">Today's Money</p>
+            <p class="salary">$53k</p>
+            <p class="desc_last"><span style="color:gray">+55%</span> <span
+                    style="color:rgb(95, 93, 93);margin-left: 5px;">than last week</span></p>
+        </div>
+
+
+        <div class="card_1">
+            <i class="fa-solid fa-user-plus icon_2 icon"></i>
+            <p style="position:relative;top:-20px">Today's Money</p>
+            <p class="salary">$53k</p>
+            <p class="desc_last"><span style="color:green">+55%</span> <span
+                    style="color:rgb(118, 115, 115);margin-left: 5px;">than last week</span></p>
+        </div>
+
+        <div class="card_1">
+            <i class="fa-solid fa-inbox icon_3 icon"></i>
+            <p style="position:relative;top:-20px">Today's Money</p>
+            <p class="salary">$53k</p>
+            <p class="desc_last"><span style="color:#D81B60">+55%</span> <span
+                    style="color:rgb(118, 115, 115);margin-left: 5px;">than last week</span></p>
+        </div>
+
+
+        <div class="card_1">
+            <i class="fa-solid fa-user-plus icon_4 icon"></i>
+            <p style="position:relative;top:-20px">Today's Money</p>
+            <p class="salary">$53k</p>
+            <p class="desc_last"><span style="color:#155ab5">+55%</span> <span
+                    style="color:rgb(118, 115, 115);margin-left: 5px;">than last week</span></p>
+        </div>
+
+    </div>
+
+    <div class=" charts">
+        <div class="cards_1">
+            <div class=" flex justify-content-center char_cards">
+                <p-chart type="pie" [data]="data" [options]="options" />
+            </div>
+            <div class="desc_chart">
+                <h4>Website Views</h4>
+                <p class="last_desc_char">Last Campaign Performance</p>
+                <p><i style="color:#D81B60 ;margin-right: 10px;" class="fa-regular fa-clock"></i>campaign sent 2 days ago</p>
+            </div>
+        </div>
+
+        <div class="cards_1 ">
+            <div class=" flex justify-content-center char_cards">
+                <p-chart type="polarArea" [data]="data" [options]="options" />
+            </div>
+            <div class="desc_chart">
+                <h4>Website Views</h4>
+                <p class="last_desc_char">Last Campaign Performance</p>
+                <p><i style="color:#D81B60 ;margin-right: 10px;" class="fa-regular fa-clock"></i>campaign sent 2 days ago</p>
+            </div>
+        </div>
+
+        <div class="cards_1">
+            <div class=" flex justify-content-center char_cards">
+                <p-chart type="doughnut" [data]="data" [options]="options" />
+            </div>
+            <div class="desc_chart">
+                <h4>Website Views</h4>
+                <p class="last_desc_char">Last Campaign Performance</p>
+                <p><i style="color:#D81B60 ;margin-right: 10px;" class="fa-regular fa-clock"></i>campaign sent 2 days ago</p>
+            </div>
+        </div>
+
+    </div>
